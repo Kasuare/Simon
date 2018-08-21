@@ -60,9 +60,6 @@ void reset(){
 void check(){
   check=true;
   noLoop();
-  mouseClicked();
-  
-  
   round++;
   counter = 0;
   check = false;
