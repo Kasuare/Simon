@@ -1,13 +1,13 @@
 //MAIN
 int round, answer, counter;
-boolean reset;
+boolean reset, check;
 ArrayList <Integer> tiles = new ArrayList<Integer>(); 
 
  void setup() {
   size(800,800);
   background(0);
   reset();
-  reset = true;
+  reset = false;
   round = 1;
   counter = 0;
   tiles.add(Math.round(random(0,3)));
@@ -19,9 +19,9 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
    if(reset && counter<round){drawTile(tiles.get(counter));reset=false; counter++;}
    else{reset();reset=true;}
    if (counter > round){
-     reset();reset=true;
      check();
    }
+
  }
 
  
@@ -58,11 +58,20 @@ void reset(){
 }
 
 void check(){
+  check=true;
   noLoop();
   mouseClicked();
   
   
   round++;
   counter = 0;
+  check = false;
   tiles.add(Math.round(random(0,3)));
+}
+
+void mouseClicked(){
+  if (check){
+    
+  }
+
 }
