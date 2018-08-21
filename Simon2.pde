@@ -10,7 +10,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
   reset = true;
   round = 1;
   i=0;
-
+  tiles.add(Math.round(random(0,3)));
  }
  
  
