@@ -16,11 +16,12 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
  
  void draw(){
    frameRate(1);
-   for(int i=0;i<tiles.size()*2;i++){
-   if(!reset){reset();reset=true;}
-   else{drawTile(tiles.get(i/2));reset=false;}
+   if(reset){drawTile(tiles.get(counter));reset=false;}
+   else{reset();reset=true;}
+   counter++;
+   if (counter == round){
+     check();
    }
-   check();
  }
 
  
@@ -62,5 +63,6 @@ void check(){
   
   
   round++;
+  counter = 0;
   tiles.add(Math.round(random(0,3));
 }
