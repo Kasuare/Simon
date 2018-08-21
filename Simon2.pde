@@ -1,5 +1,5 @@
 //MAIN
-int round, answer, i;
+int round, answer, counter;
 boolean reset;
 ArrayList <Integer> tiles = new ArrayList<Integer>(); 
 
@@ -16,9 +16,9 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
  
  void draw(){
    frameRate(1);
-   if(reset){drawTile(tiles.get(counter));reset=false;}
+   if(reset){drawTile(tiles.get(counter));reset=false;  counter++;}
    else{reset();reset=true;}
-   counter++;
+
    if (counter == round){
      check();
    }
