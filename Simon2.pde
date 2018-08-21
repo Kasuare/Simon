@@ -8,13 +8,14 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
   background(0);
   reset();
   reset = true;
+  round = 1;
 
  }
  
  
  void draw(){
    frameRate(1);
-   for(int i=0;i<=tiles.size()*2;i++){
+   for(int i=0;i<round*2;i++){
    if(!reset){reset();reset=true;}
    else{chooseTile();reset=false;}
    }
@@ -60,4 +61,6 @@ void check(){
   noLoop();
   mouseClicked();
   
+  
+  round++;
 }
