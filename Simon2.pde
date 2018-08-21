@@ -18,7 +18,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
    frameRate(1);
    for(int i=0;i<tiles.size()*2;i++){
    if(!reset){reset();reset=true;}
-   else{drawTile(tiles[i]);reset=false;}
+   else{drawTile(tiles.get(i/2));reset=false;}
    }
    check();
  }
