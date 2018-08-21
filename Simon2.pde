@@ -61,10 +61,3 @@ void check(){
   mouseClicked();
   
 }
-
- 
- 
-
-
-TEST
-TEST2
