@@ -16,7 +16,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
  
  void draw(){
    frameRate(1);
-   if(reset){drawTile(tiles.get(counter));reset=false; counter++;}
+   if(reset && counter<=round){drawTile(tiles.get(counter));reset=false; counter++;}
    else{reset();reset=true;}
 
    if (counter == round){
