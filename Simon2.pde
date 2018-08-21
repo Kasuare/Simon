@@ -1,5 +1,5 @@
 //MAIN
-int round, answer;
+int round, answer, i;
 boolean reset;
 ArrayList <Integer> tiles = new ArrayList<Integer>(); 
 
@@ -9,6 +9,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
   reset();
   reset = true;
   round = 1;
+  i=0;
 
  }
  
@@ -24,8 +25,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
 
  
  void chooseTile(){                              //eigentlich nur zum Random wählen welches Feld gefärbt wird gedacht...
- int i = Math.round(random(0,3));
- 
+
  if (i==0){ //rechts unten
    fill(0,252,0);
    arc(400, 400, 400, 400, 0, HALF_PI);
@@ -63,4 +63,5 @@ void check(){
   
   
   round++;
+  tiles.add(Math.round(random(0,3));
 }
