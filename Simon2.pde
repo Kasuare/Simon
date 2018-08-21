@@ -16,15 +16,15 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
  
  void draw(){
    frameRate(1);
-   for(int i=0;i<round*2;i++){
+   for(int i=0;i<tiles.size()*2;i++){
    if(!reset){reset();reset=true;}
-   else{chooseTile();reset=false;}
+   else{drawTile(tiles[i]);reset=false;}
    }
    check();
  }
 
  
- void chooseTile(){                              //eigentlich nur zum Random wählen welches Feld gefärbt wird gedacht...
+ void drawTile(int i){                              //eigentlich nur zum Random wählen welches Feld gefärbt wird gedacht...
 
  if (i==0){ //rechts unten
    fill(0,252,0);
@@ -46,7 +46,6 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
    arc(400, 390, 400, 400, PI+HALF_PI,2*PI);
    System.out.println("rechts oben");
    }
- tiles.add(i);
  }
 
 void reset(){
