@@ -8,7 +8,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
   background(0);
   reset();
   reset = true;
-  round = 0;
+  round = 1;
   counter = 0;
   tiles.add(Math.round(random(0,3)));
  }
@@ -16,10 +16,10 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
  
  void draw(){
    frameRate(1);
-   if(reset && counter<=round){drawTile(tiles.get(counter));reset=false; counter++;}
+   if(reset && counter<round){drawTile(tiles.get(counter));reset=false; counter++;}
    else{reset();reset=true;}
-
-   if (counter == round){
+   if (counter > round){
+     reset();reset=true;
      check();
    }
  }
