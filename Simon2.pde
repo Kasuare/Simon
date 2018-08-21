@@ -14,7 +14,7 @@ ArrayList <Integer> tiles = new ArrayList<Integer>();
  
  void draw(){
    frameRate(1);
-   for(int i=0;i<tiles.size()*2;i++){
+   for(int i=0;i<=tiles.size()*2;i++){
    if(!reset){reset();reset=true;}
    else{chooseTile();reset=false;}
    }
